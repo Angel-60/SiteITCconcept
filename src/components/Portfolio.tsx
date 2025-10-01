@@ -2,34 +2,34 @@ import { ExternalLink } from 'lucide-react';
 
 const portfolioItems = [
   {
-    title: 'Project One',
+    title: 'Portfolio Showcase',
+    category: 'Brand Portfolio',
+    image: '/PORTOFOLIU-2-1024x585.png',
+  },
+  {
+    title: 'Project Alpha',
     category: 'Social Media Campaign',
-    image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/488922789_122126407226637782_1434324868171672285_n.jpg',
   },
   {
-    title: 'Project Two',
+    title: 'Project Beta',
     category: 'Brand Development',
-    image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/504380326_122140035560773618_2108909913902773003_n.jpg',
   },
   {
-    title: 'Project Three',
+    title: 'Project Gamma',
     category: 'Marketing Strategy',
-    image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/556656003_122149002560637782_5537012176635143130_n.jpg',
   },
   {
-    title: 'Project Four',
+    title: 'Project Delta',
     category: 'Digital Transformation',
     image: 'https://images.pexels.com/photos/3184639/pexels-photo-3184639.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
-    title: 'Project Five',
+    title: 'Project Epsilon',
     category: 'Content Strategy',
     image: 'https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?auto=compress&cs=tinysrgb&w=800',
-  },
-  {
-    title: 'Project Six',
-    category: 'Social Media Growth',
-    image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
 ];
 
