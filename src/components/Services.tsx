@@ -28,11 +28,11 @@ export default function Services() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-serif font-bold text-[#D4AF37] mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[#D4AF37] mb-4">
             Our Services
           </h2>
           <div className="w-24 h-0.5 bg-[#D4AF37] mx-auto mb-6"></div>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto font-light">
+          <p className="text-base sm:text-lg text-white/70 max-w-2xl mx-auto font-light px-4">
             Comprehensive solutions designed to elevate your brand and accelerate growth
           </p>
         </div>
@@ -41,7 +41,7 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-black/40 backdrop-blur-sm border border-[#D4AF37]/20 p-8 hover:border-[#D4AF37] transition-all duration-500 hover:shadow-2xl hover:shadow-[#D4AF37]/20 hover:-translate-y-2"
+              className="group relative bg-black/40 backdrop-blur-sm border border-[#D4AF37]/20 p-6 sm:p-8 hover:border-[#D4AF37] transition-all duration-500 hover:shadow-2xl hover:shadow-[#D4AF37]/20 hover:-translate-y-2"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 

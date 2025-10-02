@@ -28,20 +28,20 @@ export default function Contact() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-serif font-bold text-[#D4AF37] mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[#D4AF37] mb-4">
             Get In Touch
           </h2>
           <div className="w-24 h-0.5 bg-[#D4AF37] mx-auto mb-6"></div>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto font-light">
+          <p className="text-base sm:text-lg text-white/70 max-w-2xl mx-auto font-light px-4">
             Ready to elevate your brand? Contact us to discuss your project
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="bg-black/40 backdrop-blur-sm border border-[#D4AF37]/20 p-8 md:p-12">
+          <div className="bg-black/40 backdrop-blur-sm border border-[#D4AF37]/20 p-6 sm:p-8 md:p-12">
             <div className="mb-12">
-              <h3 className="text-3xl font-serif font-bold text-white mb-2">Dolorem Ipsum</h3>
-              <p className="text-white/70 font-light">
+              <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white mb-2">Dolorem Ipsum</h3>
+              <p className="text-sm sm:text-base text-white/70 font-light">
                 Your trusted partner in marketing and social media excellence
               </p>
             </div>
@@ -75,7 +75,7 @@ export default function Contact() {
             </div>
 
             <div className="mt-12 pt-12 border-t border-[#D4AF37]/20 text-center">
-              <p className="text-white/70 mb-6 font-light">
+              <p className="text-sm sm:text-base text-white/70 mb-6 font-light px-4">
                 Looking for a comprehensive strategy review? Submit your information above and we'll get back to you within 24 hours.
               </p>
               <button
@@ -85,7 +85,7 @@ export default function Contact() {
                     element.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="inline-flex items-center px-6 py-3 bg-[#D4AF37] hover:bg-[#E5C158] text-black font-medium transition-all duration-300 hover:shadow-lg hover:shadow-[#D4AF37]/30"
+                className="inline-flex items-center px-5 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base bg-[#D4AF37] hover:bg-[#E5C158] text-black font-medium transition-all duration-300 hover:shadow-lg hover:shadow-[#D4AF37]/30 active:scale-95"
               >
                 Request Free Strategy Review
               </button>

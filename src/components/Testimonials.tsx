@@ -38,11 +38,11 @@ export default function Testimonials() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-serif font-bold text-[#D4AF37] mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[#D4AF37] mb-4">
             Client Testimonials
           </h2>
           <div className="w-24 h-0.5 bg-[#D4AF37] mx-auto mb-6"></div>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto font-light">
+          <p className="text-base sm:text-lg text-white/70 max-w-2xl mx-auto font-light px-4">
             Trusted by industry leaders who value excellence and results
           </p>
         </div>
@@ -51,7 +51,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="group relative bg-neutral-950/50 backdrop-blur-sm border border-[#D4AF37]/20 p-8 hover:border-[#D4AF37] transition-all duration-500 hover:shadow-2xl hover:shadow-[#D4AF37]/10"
+              className="group relative bg-neutral-950/50 backdrop-blur-sm border border-[#D4AF37]/20 p-6 sm:p-8 hover:border-[#D4AF37] transition-all duration-500 hover:shadow-2xl hover:shadow-[#D4AF37]/10"
             >
               <div className="absolute top-6 right-6 opacity-10 group-hover:opacity-20 transition-opacity duration-500">
                 <Quote className="w-16 h-16 text-[#D4AF37]" />

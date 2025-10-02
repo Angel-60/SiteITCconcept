@@ -18,11 +18,19 @@ export default function StrategyReview() {
     setError('');
 
     try {
-      const { error: submitError } = await supabase
-        .from('strategy_reviews')
-        .insert([formData]);
+      console.log('Attempting to submit form data:', formData);
 
-      if (submitError) throw submitError;
+      const { data, error: submitError } = await supabase
+        .from('strategy_reviews')
+        .insert([formData])
+        .select();
+
+      console.log('Supabase response:', { data, error: submitError });
+
+      if (submitError) {
+        console.error('Supabase error details:', submitError);
+        throw submitError;
+      }
 
       setIsSuccess(true);
       setFormData({ name: '', email: '', problem_description: '' });
@@ -30,9 +38,10 @@ export default function StrategyReview() {
       setTimeout(() => {
         setIsSuccess(false);
       }, 5000);
-    } catch (err) {
+    } catch (err: any) {
       console.error('Error submitting form:', err);
-      setError('Failed to submit. Please try again.');
+      const errorMessage = err?.message || 'Failed to submit. Please try again.';
+      setError(`Submission failed: ${errorMessage}`);
     } finally {
       setIsSubmitting(false);
     }
@@ -51,28 +60,28 @@ export default function StrategyReview() {
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-5xl md:text-6xl font-serif font-bold text-[#D4AF37] mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[#D4AF37] mb-4">
             Free Expert Strategy Review
           </h2>
           <div className="w-24 h-0.5 bg-[#D4AF37] mx-auto mb-6"></div>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto font-light">
+          <p className="text-base sm:text-lg text-white/70 max-w-2xl mx-auto font-light px-4">
             Let us analyze your current position and provide actionable insights to accelerate your growth
           </p>
         </div>
 
         {isSuccess ? (
-          <div className="bg-[#D4AF37]/10 border border-[#D4AF37] p-8 text-center animate-fade-in">
+          <div className="bg-[#D4AF37]/10 border border-[#D4AF37] p-6 sm:p-8 text-center animate-fade-in">
             <CheckCircle2 className="w-16 h-16 text-[#D4AF37] mx-auto mb-4" />
-            <h3 className="text-2xl font-serif font-semibold text-white mb-2">
+            <h3 className="text-xl sm:text-2xl font-serif font-semibold text-white mb-2">
               Thank You for Your Submission
             </h3>
-            <p className="text-white/70">
+            <p className="text-sm sm:text-base text-white/70">
               We'll review your information and get back to you within 24 hours with a comprehensive strategy overview.
             </p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="bg-neutral-950/50 backdrop-blur-sm border border-[#D4AF37]/20 p-8 md:p-12">
+            <div className="bg-neutral-950/50 backdrop-blur-sm border border-[#D4AF37]/20 p-6 sm:p-8 md:p-12">
               <div className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-white/90 mb-2">
@@ -131,7 +140,7 @@ export default function StrategyReview() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 bg-[#D4AF37] hover:bg-[#E5C158] text-black font-medium text-lg transition-all duration-300 hover:shadow-lg hover:shadow-[#D4AF37]/30 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full py-3 sm:py-4 bg-[#D4AF37] hover:bg-[#E5C158] text-black font-medium text-base sm:text-lg transition-all duration-300 hover:shadow-lg hover:shadow-[#D4AF37]/30 disabled:opacity-50 disabled:cursor-not-allowed active:scale-95"
                 >
                   {isSubmitting ? 'Submitting...' : 'Get Your Free Strategy Review'}
                 </button>
